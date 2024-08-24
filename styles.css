@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #DDD0C8; /* Beige background */
+}
+
+header {
+    background-color: #323232; /* Dark Grey */
+    color: #DDD0C8; /* Beige text */
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: #DDD0C8; /* Beige text */
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #4A4A4A; /* Slightly lighter grey for hover */
+}
+
+main {
+    padding: 2em;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center; /* Center the gallery container */
+    padding: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 600px); /* Two images per row with fixed width */
+    gap: 30px; /* Gap between images */
+    max-width: 1200px; /* Max width for two images */
+    width: 100%; /* Ensure it takes full width */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.gallery img {
+    width: 600px; /* Fixed width */
+    height: 800px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border: 2px solid #323232; /* Dark Grey border */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.gallery img.active {
+    transform: scale(1.1); /* Slightly larger when active */
+    z-index: 10; /* Bring the image to the front */
+}
+
